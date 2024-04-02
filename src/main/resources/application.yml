@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: JobHive
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jobhivedb
+    username: postgres
+    password:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  logging:
+    level:
+      org.springframework.security: trace
+
+jwt:
+  refreshToken:
+    expiresIn: 2629746000
+    secretKey: b3b87ee6ca7dcb8c7d25fa0a4dc2f04f5fafb18dea27286e0d341a8f5038394f0d13bce74860cd40b802406d74631234b01901ce2820ffa5de4efc80004298bf
+  accessToken:
+    expiresIn: 604800000
+    secretKey: 3e8a38c6948212f68f2e2d1f48b3d9bddc4cd7c76cdf457d102a69f7bc7738d765ede4b22bbe8e709ce50851971fb1ad0f066addb24dc8fdec8560e54f1070f2
+
+csangharsha:
+  openapi:
+    local-url: http://localhost:8080
